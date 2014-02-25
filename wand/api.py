@@ -291,6 +291,9 @@ try:
 
     library.MagickSetImageColorspace.argtypes = [ctypes.c_void_p, ctypes.c_int]
 
+    library.MagickTransformImageColorspace.argtypes = [ ctypes.c_void_p,
+                                                        ctypes.c_int ]
+
     library.MagickGetImageDepth.argtypes = [ctypes.c_void_p]
     library.MagickGetImageDepth.restype = ctypes.c_size_t
 

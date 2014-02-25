@@ -858,7 +858,7 @@ class BaseImage(Resource):
             or colorspace_type not in COLORSPACE_TYPES:
             raise TypeError('Colorspace value must be a string from '
                             'COLORSPACE_TYPES, not ' + repr(colorspace_type))
-        r = library.MagickSetImageColorspace(self.wand,
+        r = library.MagickTransformImageColorspace(self.wand,
                                     COLORSPACE_TYPES.index(colorspace_type))
         if not r:
             self.raise_exception()
